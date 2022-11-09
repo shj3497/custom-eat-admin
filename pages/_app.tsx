@@ -1,4 +1,4 @@
-import '../styles/globals.css';
+import '../styles/global.css';
 import createEmotionCache from '@/lib/theme/createEmotionCache';
 import theme from '@/lib/theme/theme';
 import {CacheProvider, EmotionCache} from '@emotion/react';
