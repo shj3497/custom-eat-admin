@@ -1,8 +1,0 @@
-{
-  "name": "pentacle-nextjs-template",
-  "version": "0.0.2",
-  "description": "Typescript, React, Next.js, MUI, Recoil, React-query, Storybook",
-  "repository": "https://github.com/mz-pentacle/pentacle-nextjs-template.git",
-  "author": "ShimHyoekJin <shj3497@gmail.com>",
-  "license": "MIT"
-}
