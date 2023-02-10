@@ -1,5 +1,17 @@
 const securityHeaders = [
   {
+    key: 'X-DNS-Prefetch-Control',
+    value: 'on',
+  },
+  {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
+    key: 'X-XSS-Protection',
+    value: '1; mode=block',
+  },
+  {
     key: 'X-Frame-Options',
     value: 'SAMEORIGIN',
   },
@@ -8,18 +20,41 @@ const securityHeaders = [
     value: 'nosniff',
   },
   {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=31536000',
-  },
-  {
-    key: 'X-XSS-Protection',
-    value: '1; mode=block',
+    key: 'Referrer-Policy',
+    value: 'origin-when-cross-origin',
   },
 ];
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
   poweredByHeader: false,
+  trailingSlash: false,
+  swcMinify: true,
+  experimental: {
+    scrollRestoration: true,
+  },
+  transpilePackages: ['@mui/material', '@mui/icons-material', '@mui/system'],
+  modularizeImports: {
+    '@mui/material': {
+      transform: '@mui/material/{{member}}',
+    },
+    '@mui/icons-material': {
+      transform: '@mui/icons-material/{{member}}',
+    },
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  images: {
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: '',
+    //     port: '',
+    //     pathname: '',
+    //   },
+    // ],
+  },
 
   async header() {
     return [
