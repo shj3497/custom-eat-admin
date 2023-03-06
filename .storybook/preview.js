@@ -2,11 +2,16 @@ import '../styles/global.css';
 import * as nextImage from 'next/image';
 import {RouterContext} from 'next/dist/shared/lib/router-context';
 import {RecoilRoot} from 'recoil';
-
 import {StyledEngineProvider, ThemeProvider} from '@mui/material/styles';
 import {QueryClient, QueryClientProvider} from 'react-query';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/lib/theme/theme';
+import {setConfig} from 'next/config';
+import {publicRuntimeConfig} from '../next.config';
+
+setConfig({
+  publicRuntimeConfig,
+});
 
 /*
  * Fix next/image component issue.
@@ -38,7 +43,9 @@ export const decorators = [
         <QueryClientProvider client={queryClient}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
-            <Story {...context} />
+            <div style={{display: 'flex', justifyContent: 'center'}}>
+              <Story {...context} />
+            </div>
           </ThemeProvider>
         </QueryClientProvider>
       </StyledEngineProvider>

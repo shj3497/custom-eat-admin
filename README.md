@@ -9,6 +9,8 @@
 - Axios
 - MUI
 
+node v14.18.0
+
 <br/>
 
 빈폴더를 github에 유지하고자 .gitkeep을 추가해 놓았다.  
