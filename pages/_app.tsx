@@ -49,7 +49,7 @@ const MyApp = (props: MyAppProps) => {
       <CacheProvider value={emotionCache}>
         <StyledEngineProvider injectFirst>
           <Head>
-            <title>연습용</title>
+            <title>Title</title>
           </Head>
 
           <QueryClientProvider client={queryClient}>
