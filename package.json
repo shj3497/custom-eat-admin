@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "codegen": "openapi-generator generate -i http://localhost:8080/swagger-json -g typescript-axios -o ./lib/api/services -c ./openapi.json --skip-validate-spec"
+    "codegen": "openapi-generator generate -i http://localhost:8080/v3/api-docs -g typescript-axios -o ./lib/services/api -c ./openapi.json --skip-validate-spec"
   },
   "dependencies": {
     "@emotion/eslint-plugin": "^11.11.0",
