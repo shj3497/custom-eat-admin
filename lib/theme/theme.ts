@@ -1,5 +1,6 @@
 import {createTheme} from '@mui/material/styles';
 import {red} from '@mui/material/colors';
+import fonts from '../fonts';
 
 // breakpoints의 value를 추가해줘서 새롭게 정의
 declare module '@mui/material' {
@@ -12,11 +13,9 @@ declare module '@mui/material' {
 }
 
 const fontFamily = [
-  '"Noto Sans KR"',
-  'Roboto',
-  'Helvetica',
-  'Arial',
-  'sans-serif',
+  `${fonts.Noto_Sans_KR.style.fontFamily}`,
+  `${fonts.Montserrat.style.fontFamily}`,
+  `${fonts.Roboto.style.fontFamily}`,
 ].join(',');
 
 const breakpointValue = {
@@ -26,8 +25,8 @@ const breakpointValue = {
   lg: 992,
   xl: 1200,
   xxl: 1400,
-  mobile: 641,
-  tablet: 1025,
+  mobile: 601,
+  tablet: 1201,
   desktop: 1400,
 };
 

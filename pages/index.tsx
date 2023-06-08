@@ -1,6 +1,9 @@
-import React from "react";
+import {NextPage} from 'next';
+import React from 'react';
 
-const Page = () => {
+interface PageProps {}
+
+const Page: NextPage<PageProps> = () => {
   return <div>Page</div>;
 };
 

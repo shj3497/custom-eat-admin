@@ -4,24 +4,22 @@ import createEmotionServer from '@emotion/server/create-instance';
 import {CacheProvider} from '@emotion/react';
 import {ServerStyleSheets} from '@mui/styles';
 import createEmotionCache from '@/lib/theme/createEmotionCache';
+import {styled} from '@mui/material';
+
+const Body = styled('body')``;
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap"
-          />
-
           <meta name="emotion-insertion-point" content="" />
           {(this.props as any).emotionStyleTags}
         </Head>
-        <body>
+        <Body>
           <Main />
           <NextScript />
-        </body>
+        </Body>
       </Html>
     );
   }

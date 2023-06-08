@@ -24,6 +24,7 @@ const securityHeaders = [
     value: 'origin-when-cross-origin',
   },
 ];
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: false,
@@ -36,16 +37,6 @@ const nextConfig = {
 
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-  },
-  images: {
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: '',
-    //     port: '',
-    //     pathname: '',
-    //   },
-    // ],
   },
 
   async header() {
@@ -65,7 +56,6 @@ const nextConfig = {
       },
     ];
   },
-
   publicRuntimeConfig: {
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
   },

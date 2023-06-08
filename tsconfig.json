@@ -21,6 +21,6 @@
       "@/lib/*": ["lib/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "**/*.stories.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/_error.tsx"],
+  "exclude": ["node_modules", "**/*.stories.mdx"]
 }
